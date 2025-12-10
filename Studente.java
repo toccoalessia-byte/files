@@ -35,6 +35,20 @@ public static void main(String[] args) throws IOException{
     System.out.print("Cognome: ");
     String cognome=sc.nextLine().trim();
 
+    System.out.print("Matricola: ");
+    String matricola=sc.nextLine().trim();
+
+    System.out.print("Anno nascita: ");
+    String annoInput=sc.nextLine().trim();
+    int anno;
+
+    try{
+      anno=Integer.parseInt(annoInput);
+    } catch (NumberFormatException e) {
+      System.out.println("Anno non valido, riprova. \n");
+      continue;
+    }
+
     
 
 
