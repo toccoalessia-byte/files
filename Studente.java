@@ -18,3 +18,33 @@ public Studente(String nome, String cognome, String matricola, int annoNascita){
   this.annoNascita=annoNascita;}
 
   //converte in una riga CSV "matricola;nome;cognome;anno"
+public String toCsv(){
+  return String.join(";", matricola, nome, cognome, Integer.toString(annoNascita));
+}
+
+public static void main(String[] args) throws IOException{
+  Scanner sc=new Scanner(System.in);
+  Path csv=Path.off("studenti.csv");
+
+  System.out.println("Inserisci studenti. Digita 'exit' per terminare.");
+  while (true){
+    System.out.print("Nome(o 'exit' per uscire): ");
+    String nome=sc.nextLine().trim();
+    if(nome.equalsIgnoreCase("exit")) break;
+
+    System.out.print("Cognome: ");
+    String cognome=sc.nextLine().trim();
+
+    
+
+
+
+
+
+
+
+
+
+      
+
+    
