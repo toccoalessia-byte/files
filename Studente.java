@@ -48,6 +48,25 @@ public static void main(String[] args) throws IOException{
       System.out.println("Anno non valido, riprova. \n");
       continue;
     }
+     Studente s = new Studente(nome, cognome, matricola, anno);
+            Files.writeString(
+                csv,
+                s.toCsv() + System.lineSeparator(),
+                StandardCharsets.UTF_8,
+                StandardOpenOption.CREATE,
+                StandardOpenOption.APPEND
+            );
+            System.out.println("Salvato: " + s.toCsv());
+
+            System.out.print("Premi Invio per aggiungere un altro studente o digita 'exit' per uscire: ");
+            if (sc.nextLine().trim().equalsIgnoreCase("exit")) {
+                break;
+            }
+        }
+        System.out.println("Programma terminato.");
+    }
+}
+
 
     
 
