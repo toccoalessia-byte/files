@@ -11,4 +11,10 @@ public class Studente{
   private final String matricola;
   private final int annoNascita;
 
-public Studente(String nome, String cognome,
+public Studente(String nome, String cognome, String matricola, int annoNascita){
+  this.nome=nome;
+  this.cognome=cognome;
+  this.matricola=matricola;
+  this.annoNascita=annoNascita;}
+
+  //converte in una riga CSV "matricola;nome;cognome;anno"
